@@ -1,0 +1,77 @@
+/* Design System - ASD */
+:root {
+  /* Blue Palette */
+  --blue-light: #eaeffd;
+  --blue-light-hover: #e0e7fc;
+  --blue-light-active: #bfcdf8;
+  --blue-normal: #2f5eea;
+  --blue-normal-hover: #2a55d3;
+  --blue-normal-active: #264bbb;
+  --blue-dark: #2347b0;
+  --blue-dark-hover: #1c388c;
+  --blue-dark-active: #152a69;
+  --blue-darker: #102152;
+
+  /* Orange Palette */
+  --orange-light: #fff0e6;
+  --orange-light-hover: #ffe9d9;
+  --orange-light-active: #ffd1b0;
+  --orange-normal: #ff6900;
+  --orange-normal-hover: #e65f00;
+  --orange-normal-active: #cc5400;
+  --orange-dark: #bf4f00;
+  --orange-dark-hover: #993f00;
+  --orange-dark-active: #732f00;
+  --orange-darker: #592500;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --bg-cream: #fef6f0;
+  --bg-light-pink: #fdf1e9;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Semantic */
+  --primary: var(--orange-normal);
+  --primary-hover: var(--orange-normal-hover);
+  --secondary: var(--blue-darker);
+  --text-primary: var(--blue-darker);
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  /* Typography */
+  --font-arabic: 'IBM Plex Sans Arabic', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(16, 33, 82, 0.05);
+  --shadow-md: 0 4px 6px rgba(16, 33, 82, 0.07), 0 2px 4px rgba(16, 33, 82, 0.04);
+  --shadow-lg: 0 10px 30px rgba(16, 33, 82, 0.08);
+  --shadow-xl: 0 20px 50px rgba(16, 33, 82, 0.1);
+  --shadow-card: 0 4px 20px rgba(16, 33, 82, 0.06);
+  --shadow-orange: 0 8px 20px rgba(255, 105, 0, 0.25);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --trans-fast: 0.15s ease;
+  --trans-base: 0.3s ease;
+  --trans-slow: 0.5s ease;
+
+  /* Container */
+  --container-max: 1200px;
+}

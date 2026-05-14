@@ -1,0 +1,58 @@
+.accred-section {
+  background: var(--bg-light-pink);
+  padding: 90px 0;
+}
+
+.accred-logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+@media (max-width: 992px) {
+  .accred-logos { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 576px) {
+  .accred-logos { grid-template-columns: repeat(2, 1fr); }
+}
+
+.accred-logo {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 20px 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 110px;
+  border: 1px solid var(--gray-100);
+  transition: all var(--trans-base);
+}
+
+.accred-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--orange-light-active);
+}
+
+.accred-logo-mark {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.logo-abbr {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.accred-logo-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.4;
+}

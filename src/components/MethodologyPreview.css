@@ -1,0 +1,103 @@
+.method-section {
+  background: linear-gradient(180deg, var(--bg-cream) 0%, white 100%);
+  position: relative;
+}
+
+.method-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  position: relative;
+}
+
+.method-line {
+  position: absolute;
+  top: 45px;
+  right: 10%;
+  left: 10%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to left,
+    var(--orange-light-active) 0,
+    var(--orange-light-active) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  z-index: 0;
+}
+
+@media (max-width: 992px) {
+  .method-steps { grid-template-columns: repeat(2, 1fr); }
+  .method-line { display: none; }
+}
+@media (max-width: 576px) {
+  .method-steps { grid-template-columns: 1fr; }
+}
+
+.method-step {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 32px 24px 28px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--gray-100);
+  transition: all var(--trans-base);
+}
+
+.method-step:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--orange-light-active);
+}
+
+.method-icon {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 22px;
+  background: white;
+  color: var(--orange-normal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--bg-cream);
+}
+
+.method-step:hover .method-icon {
+  background: var(--orange-normal);
+  color: white;
+}
+
+.method-num {
+  position: absolute;
+  bottom: -8px;
+  right: -6px;
+  width: 32px;
+  height: 32px;
+  background: var(--blue-darker);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.method-step h3 {
+  font-size: 1.12rem;
+  color: var(--blue-darker);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.method-step p {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}

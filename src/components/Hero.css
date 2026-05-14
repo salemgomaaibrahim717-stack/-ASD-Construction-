@@ -1,0 +1,214 @@
+.hero-section {
+  position: relative;
+  min-height: 92vh;
+  padding: 160px 0 100px;
+  background:
+    radial-gradient(ellipse at top right, rgba(255, 105, 0, 0.12), transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(47, 94, 234, 0.22), transparent 50%),
+    linear-gradient(135deg, #0a1838 0%, var(--blue-darker) 45%, #1a1d4a 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Decorative elements */
+.hero-decor {
+  position: absolute;
+  border-radius: var(--radius-2xl);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.decor-1 {
+  top: 80px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  transform: rotate(15deg);
+  border-radius: 40px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.decor-2 {
+  bottom: 60px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 32px;
+  transform: rotate(-12deg);
+  animation: float 9s ease-in-out infinite reverse;
+}
+
+.decor-circle {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255,105,0,0.1), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-glow {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(47,94,234,0.25), transparent 60%);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 30px;
+  backdrop-filter: blur(8px);
+  font-weight: 500;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--orange-normal);
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.hero-desc {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 680px;
+  margin: 0 auto 42px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 72px;
+}
+
+.hero-actions .btn-custom {
+  padding: 15px 36px;
+  font-size: 1rem;
+}
+
+/* Stats */
+.hero-stats {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 48px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-2xl);
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-stat strong {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--orange-normal);
+  line-height: 1;
+  font-family: var(--font-arabic);
+}
+
+.hero-stat span {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 6px;
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.scroll-mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  position: relative;
+}
+.scroll-dot {
+  width: 4px;
+  height: 8px;
+  background: var(--orange-normal);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-move 2s infinite;
+}
+@keyframes scroll-move {
+  0% { top: 6px; opacity: 1; }
+  50% { top: 20px; opacity: 0.5; }
+  100% { top: 6px; opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section { padding: 120px 0 80px; min-height: auto; }
+  .hero-stats {
+    gap: 20px;
+    padding: 16px 22px;
+  }
+  .hero-stat strong {
+    font-size: 1.6rem;
+  }
+  .decor-1 { width: 120px; height: 120px; top: 40px; right: -60px; }
+  .decor-2 { width: 110px; height: 110px; bottom: 40px; left: -60px; }
+}

@@ -1,0 +1,171 @@
+.projects-page {
+  background: var(--bg-cream);
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 16px 22px;
+  border-radius: var(--radius-xl);
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue-darker);
+  font-weight: 600;
+}
+.filter-label svg {
+  color: var(--orange-normal);
+}
+
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all var(--trans-base);
+  font-family: inherit;
+}
+
+.filter-chip:hover {
+  border-color: var(--orange-normal);
+  color: var(--orange-normal);
+}
+
+.filter-chip.active {
+  background: var(--orange-normal);
+  color: white;
+  border-color: var(--orange-normal);
+}
+
+.projects-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 992px) {
+  .projects-page-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+  .projects-page-grid { grid-template-columns: 1fr; }
+}
+
+.project-card-full {
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--trans-base);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-full:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.project-card-full .project-image {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+.project-card-full .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--trans-slow);
+}
+.project-card-full:hover .project-image img {
+  transform: scale(1.08);
+}
+.project-card-full .project-body {
+  padding: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-card-full .project-body h3 {
+  font-size: 1.2rem;
+  color: var(--blue-darker);
+  margin-bottom: 8px;
+}
+.project-card-full .project-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+.project-card-full .project-location svg {
+  color: var(--orange-normal);
+}
+.project-card-full p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.project-scope {
+  margin-bottom: 16px;
+}
+.project-scope strong {
+  display: block;
+  color: var(--blue-darker);
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+.scope-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.scope-chip {
+  padding: 4px 10px;
+  background: var(--orange-light);
+  color: var(--orange-normal);
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.project-card-full .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange-normal);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  align-self: flex-start;
+  transition: gap var(--trans-base);
+}
+.project-card-full .project-link:hover {
+  gap: 12px;
+  color: var(--orange-normal-hover);
+}
